@@ -66,6 +66,8 @@ Create BDBag and MINID is a tool takes any history items or outputs of the tools
 
 ### Integrate BDBags and Minids with Topmed RNAseq workflow
 
+![Screenshot](images/Get-and-create-integrated.png)
+
 ## End-to-end analysis using BDBags as inputs
 ### Authentication and Authorization
 ### Using Python API
