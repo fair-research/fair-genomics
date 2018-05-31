@@ -90,17 +90,29 @@ An API key will allow you to access via web API. Please note that this key acts 
 **Step-1: Login:** 
 Using Globus ID, login to the NIH-Commons Globus Genomics instance at: http://nihcommons.globusgenomics.org
 
+
 **Step-2: Import the workflow:** 
 From the top-menu, go to "Shared Data -> Workflows". Select the workflow named "RNA-seq-Gtex-stage1-v2.0-bags_transfer" and click "import" to import the workflow into you account. 
+
 ![Screenshot](images/GG-import-workflow.png)
+
 You should see the imported workflow under the "Workflow" link from the top menu.
+
 ![Screenshot](images/GG-imported-workflow.png)
+
 
 **Step-3: Run the workflow:** 
 Select the imported workflow from the "Workflow" menu item and click on "Run".
+
 ![Screenshot](images/GG-select-workflow-to-run.png)
 
+You will notice that the workflow only takes one input, the MINID for the [input data BDBag](#input-data): ark:/57799/b9f11t as shown in the screenshot below:
 
+![Screenshot](images/GG-run-workflow.png)
+
+Provide the MINID in the input text box of the first step in the workflow and click on "Run Workflow".
+
+The workflow will be submitting within Galaxy and all the tasks will be added to the history. The steps within the workflow will start running one after another based on the depencies. The first step in the workflow, "Get BDBag from MINID" will download the input sample represented by the BDBag ([ark:/57799/b9f11t](#input-data)). In this case, it is just one sample that is downloaed. After the download is complete, it will run all the steps one-by-one to complete the analysis and finally the "Create BDBag and MINID" step will run, that will create a new BDBag with all the outputs, provenance, and performance files in the bag. 
 
 ## List of BDBags
 ### Input Data
