@@ -36,7 +36,7 @@ For each input sample, this RNAseq pipeline generates:
 The figure below describes the RNAseq pipeline and its components:
 ![Screenshot](images/TOPMed-RNAseq-pipeline.png)
 
-We have wrapped the following versions of tools within Globus Genomics - Galaxy and we have made all the wrappers available within the [Tools BDBag](#workflow-tools-and-tool-wrappers)
+We have wrapped the following versions of tools within Globus Genomics - Galaxy and we have made all the wrappers available within the [Tools BDBag](#workflow-tools-and-tool-wrappers) with MINID: [ark:/57799/b9t690].(http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690)
 
 The pipeline uses the following individul tools:
 * Alignment: [STAR 2.5.3a](https://github.com/alexdobin/STAR/releases/tag/2.5.3a)
