@@ -33,15 +33,17 @@ For each input sample, this RNAseq pipeline generates:
 4. Transcript-level expression quantifications, provided as TPM, expected read counts, and isoform percentages
 
 ### Components
-* Alignment: [STAR 2.5.3a](https://github.com/alexdobin/STAR)
+The figure below describes the RNAseq pipeline and its components:
+![Screenshot](images/inputs-bag.png)
+
+* Alignment: [STAR 2.5.3a](https://github.com/alexdobin/STAR/releases/tag/2.5.3a)
   * Post-processing: [Picard 2.9.0](https://github.com/broadinstitute/picard) [MarkDuplicates](https://broadinstitute.github.io/picard/command-line-overview.html#MarkDuplicates)
 * Gene quantification and quality control: [RNA-SeQC 1.1.9](https://github.com/francois-a/rnaseqc)
 * Transcript quantification: [RSEM 1.3.0](https://deweylab.github.io/RSEM/)
 * Utilities: [SAMtools 1.6](https://github.com/samtools/samtools/releases) and [HTSlib 1.6](https://github.com/samtools/htslib/releases)
 
 ### Reference files
-This section describes the GRCh38 reference genome and GENCODE 26 annotation used, including the addition of ERCC spike-in annotations.
-
+The tools within this pipeline require Reference genomes. Following GRCh38 reference genome are used 
 The reference files described in this section can be obtained through the following links:
 * Reference genome for RNA-seq alignment (contains .fasta, .fai, and .dict files): [Homo_sapiens_assembly38_noALT_noHLA_noDecoy_ERCC.tar.gz](https://personal.broadinstitute.org/francois/topmed/Homo_sapiens_assembly38_noALT_noHLA_noDecoy_ERCC.tar.gz)
 * Collapsed gene model: [gencode.v26.GRCh38.ERCC.genes.gtf.gz](https://personal.broadinstitute.org/francois/topmed/gencode.v26.GRCh38.ERCC.genes.gtf.gz)
