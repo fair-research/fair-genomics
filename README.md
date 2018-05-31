@@ -21,6 +21,12 @@
 This README describes the implementation of TOPMed RNAseq analysis pipeline that uses BDBags and MINID within a Galaxy based Globus Genomics (GG) platform to support FAIR (Findable, Accessible, Interoperable, Reusable) research. We have implemented specific tools within GG that automate the use of MINIDs representing input databags and generate output BDBags along with provenance and performance metric that can be used to validate reproducibility.
 
 ## Topmed RNAseq workflow
+We selected the TOPMed RNAseq pipeline as described in detail at: https://github.com/broadinstitute/gtex-pipeline/blob/master/TOPMed_RNAseq_pipeline.md
+For each input sample, this RNAseq pipeline generates:
+1. Aligned RNAseq reads (BAM format)
+2. QC Metrics on the aligned reads
+3. Gene-level expression quantifications based on a collapsed version of a reference transcript annotation, provided as read counts and TPM.
+4. Transcript-level expression quantifications, provided as TPM, expected read counts, and isoform percentages
 
 ## Integration of Minids and BDBags
 ### Get Data using MINID
