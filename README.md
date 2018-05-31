@@ -87,8 +87,20 @@ An API key will allow you to access via web API. Please note that this key acts 
 
 
 ### Using Globus Genomics Web UI
-*Step-1: Login:* Using Globus ID, login to the NIH-Commons Globus Genomics instance at: http://nihcommons.globusgenomics.org
-*Step-2: Import the workflow:*
+**Step-1: Login:** 
+Using Globus ID, login to the NIH-Commons Globus Genomics instance at: http://nihcommons.globusgenomics.org
+
+**Step-2: Import the workflow:** 
+From the top-menu, go to "Shared Data -> Workflows". Select the workflow named "RNA-seq-Gtex-stage1-v2.0-bags_transfer" and click "import" to import the workflow into you account. 
+![Screenshot](images/GG-import-workflow.png)
+You should see the imported workflow under the "Workflow" link from the top menu.
+![Screenshot](images/GG-imported-workflow.png)
+
+**Step-3: Run the workflow:** 
+Select the imported workflow from the "Workflow" menu item and click on "Run".
+![Screenshot](images/GG-select-workflow-to-run.png)
+
+
 
 ## List of BDBags
 ### Input Data
