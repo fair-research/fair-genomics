@@ -112,10 +112,36 @@ You will notice that the workflow only takes one input, the MINID for the [input
 
 Provide the MINID in the input text box of the first step in the workflow and click on "Run Workflow".
 
+![Screenshot](images/GG-submit-success.png)
+
 The workflow will be submitting within Galaxy and all the tasks will be added to the history. The steps within the workflow will start running one after another based on the depencies. The first step in the workflow, "Get BDBag from MINID" will download the input sample represented by the BDBag ([ark:/57799/b9f11t](#input-data)). In this case, it is just one sample that is downloaed. After the download is complete, it will run all the steps one-by-one to complete the analysis and finally the "Create BDBag and MINID" step will run, that will create a new BDBag with all the outputs, provenance, and performance files in the bag. 
 
 ## List of BDBags
 ### Input Data
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9f11t
+
+![Screenshot](images/BDBag-input-data.png)
+
 ### Outputs, Provenance and Performance
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9x12j
+
+![Screenshot](images/BDBag-outputs-data.png)
+
 ### Workflow, Tools and Tool wrappers
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b92q4f
+
+![Screenshot](images/BDBag-RNAseq-workflow.png)
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690
+
+![Screenshot](images/BDBag-tools-wrappers.png)
+
+
 ### Tools reference databases
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9ph5b
+
+![Screenshot](images/BDBag-reference-genomes.png)
