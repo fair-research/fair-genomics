@@ -2,8 +2,8 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-1. [Topmed RNAseq workflow](#Topmed-RNAseq-workflow)
-1. [Integration of Minids and BDBags](#Integration-of-Minids-and-BDBags)
+1. [Topmed RNAseq workflow](#topmed-rnaseq-workflow)
+1. [Integration of Minids and BDBags](#integration-of-minids-and-bdbags)
     1. Get Data using MINID
     1. Publish Results using BDBag MINID
     1. Integrate (i) and (ii) with the Topmed RNAseq workflow
