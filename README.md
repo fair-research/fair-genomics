@@ -18,6 +18,7 @@
     1. [Tools reference databases](#tools-reference-databases)
 
 ## Introduction
+This README describes the implementation of TOPMed RNAseq analysis pipeline that uses BDBags and MINID within a Galaxy based Globus Genomics (GG) platform to support FAIR (Findable, Accessible, Interoperable, Reusable) research. We have implemented specific tools within GG that automate the use of MINIDs representing input databags and generate output BDBags along with provenance and performance metric that can be used to validate reproducibility.
 
 ## Topmed RNAseq workflow
 
