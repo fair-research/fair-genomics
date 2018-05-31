@@ -41,6 +41,7 @@ wf_data['workflow_id'] = wf_mine['id']
 wf_data['ds_map'] = {}
 parameters = {}
 parameters['0'] = {'minid' : input_minid}
+parameters['5'] = {'historyid' : history['id'], 'userapi' : API_KEY, 'url' : URL}
 wf_data['parameters'] = parameters
 res = gi.workflows.invoke_workflow(wf_data['workflow_id'], wf_data['ds_map'], params=wf_data['parameters'], history_id=history['id'], import_inputs_to_history=False)
 print "SUBMITTED\t%s\t%s\t%s\t%s\t%s" % (input_minid, wf_mine['name'], wf_mine['id'], history_name, res['history_id'])
