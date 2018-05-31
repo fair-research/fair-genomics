@@ -60,6 +60,10 @@ Get BDBag using MINID is a new Galaxy tool we have added to GG that downloads al
 ![Screenshot](images/Get-BDBag-using-MINID.png)
 
 ### Publish results using BDBag and MINID
+Create BDBag and MINID is a tool takes any history items or outputs of the tools and creates a BDBag and publishes it. It returns a MINID referencing the BDBag created. The following figure shows the tool within GG.
+
+![Screenshot](images/Create-BDBag-and-Minid.png)
+
 ### Integrate BDBags and Minids with Topmed RNAseq workflow
 
 ## End-to-end analysis using BDBags as inputs
