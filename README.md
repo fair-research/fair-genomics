@@ -10,7 +10,7 @@
     1. [Get Data using MINID](#get-data-using-minid)
     1. [Publish Results using BDBag MINID](#publish-results-using-bdbag-and-minid)
     1. [Integrate BDBags/Minids with the Topmed RNAseq workflow](#integrate-bdbags-and-minids-with-topmed-rnaseq-workflow)
-4. [End-to-end analysis using BDBags as inputs](#end---to---end-analysis-using-bdbags-as-inputs)
+4. [End-to-end analysis using BDBags as inputs](#end-to-end-analysis-using-bdbags-as-inputs)
     1. [Authentication and Authorization](#authentication-and-authorization)
     1. [Using Python API](#using-python-api)
     1. [Using Globus Genomics Web UI](#using-globus-genomics-web-ui)
