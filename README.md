@@ -34,8 +34,11 @@ For each input sample, this RNAseq pipeline generates:
 
 ### Components
 The figure below describes the RNAseq pipeline and its components:
-![Screenshot](images/inputs-bag.png)
+![Screenshot](images/TOPMed-RNAseq-pipeline.png)
 
+We have wrapped the following versions of tools within Globus Genomics - Galaxy and we have made all the wrappers available within the [Tools BDBag](#workflow-tools-and-tool-wrappers)
+
+The pipeline uses the following individul tools:
 * Alignment: [STAR 2.5.3a](https://github.com/alexdobin/STAR/releases/tag/2.5.3a)
   * Post-processing: [Picard 2.9.0](https://github.com/broadinstitute/picard) [MarkDuplicates](https://broadinstitute.github.io/picard/command-line-overview.html#MarkDuplicates)
 * Gene quantification and quality control: [RNA-SeQC 1.1.9](https://github.com/francois-a/rnaseqc)
@@ -43,8 +46,7 @@ The figure below describes the RNAseq pipeline and its components:
 * Utilities: [SAMtools 1.6](https://github.com/samtools/samtools/releases) and [HTSlib 1.6](https://github.com/samtools/htslib/releases)
 
 ### Reference files
-The tools within this pipeline require Reference genomes. Following GRCh38 reference genome are used 
-The reference files described in this section can be obtained through the following links:
+The tools listed above require Reference genomes. Following GRCh38 reference genome are used currently:
 * Reference genome for RNA-seq alignment (contains .fasta, .fai, and .dict files): [Homo_sapiens_assembly38_noALT_noHLA_noDecoy_ERCC.tar.gz](https://personal.broadinstitute.org/francois/topmed/Homo_sapiens_assembly38_noALT_noHLA_noDecoy_ERCC.tar.gz)
 * Collapsed gene model: [gencode.v26.GRCh38.ERCC.genes.gtf.gz](https://personal.broadinstitute.org/francois/topmed/gencode.v26.GRCh38.ERCC.genes.gtf.gz)
 * STAR index: [STAR_genome_GRCh38_noALT_noHLA_noDecoy_ERCC_v26_oh100.tar.gz](https://personal.broadinstitute.org/francois/topmed/STAR_genome_GRCh38_noALT_noHLA_noDecoy_ERCC_v26_oh100.tar.gz)
