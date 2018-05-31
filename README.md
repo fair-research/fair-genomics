@@ -119,18 +119,29 @@ The workflow will be submitting within Galaxy and all the tasks will be added to
 ## List of BDBags
 ### Input Data
 
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9f11t
+
 ![Screenshot](images/BDBag-input-data.png)
 
 ### Outputs, Provenance and Performance
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9x12j
 
 ![Screenshot](images/BDBag-outputs-data.png)
 
 ### Workflow, Tools and Tool wrappers
 
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b92q4f
+
 ![Screenshot](images/BDBag-RNAseq-workflow.png)
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690
+
 ![Screenshot](images/BDBag-tools-wrappers.png)
 
 
 ### Tools reference databases
+
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9ph5b
 
 ![Screenshot](images/BDBag-reference-genomes.png)
