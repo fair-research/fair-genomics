@@ -14,7 +14,7 @@
     1. [Input Data](#input-data)
     1. [Outputs, Provenance and Performance](#outputs-provenance-and-performance)
     1. [Workflow, Tools and Tool wrappers](#workflow-tools-and-tool-wrappers)
-    1. [Tools reference databases](#tools-reference-database)
+    1. [Tools reference databases](#tools-reference-databases)
 
 ## Introduction
 
