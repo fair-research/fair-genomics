@@ -53,8 +53,12 @@ The tools listed above require Reference genomes. Following GRCh38 reference gen
 * STAR index database: [STAR_genome_GRCh38_noALT_noHLA_noDecoy_ERCC_v26_oh100.tar.gz](https://personal.broadinstitute.org/francois/topmed/STAR_genome_GRCh38_noALT_noHLA_noDecoy_ERCC_v26_oh100.tar.gz)
 * RSEM reference database: [rsem_reference_GRCh38_gencode26_ercc.tar.gz](https://personal.broadinstitute.org/francois/topmed/rsem_reference_GRCh38_gencode26_ercc.tar.gz)
 
-## Integration of Minids and BDBags
-### Get Data using MINID
+## Integration of MINIDs and BDBags
+We have added new tools within Globus Genomics to support the use of MINIDs and BDBags. We have specifically added two tools - 1) Get BDBag using MINID, and 2) Create BDBag and MINID 
+### Get BDBag using MINID
+Get BDBag using MINID is a new Galaxy tool we have added to GG that downloads all the data within the BDBag and adds it to Galaxy history. The following figure shows the tool withn GG.
+![Screenshot](images/Get-BDBag-using-MINID.png)
+
 ### Publish results using BDBag and MINID
 ### Integrate BDBags and Minids with Topmed RNAseq workflow
 
