@@ -88,7 +88,7 @@ An API key will allow you to access via web API. Please note that this key acts 
 
 ### Using Globus Genomics Web UI
 **Step-1: Login:** 
-Using Globus ID, login to the NIH-Commons Globus Genomics instance at: http://nihcommons.globusgenomics.org
+Using Globus ID, login to the NIH-Commons Globus Genomics instance at: https://nihcommons.globusgenomics.org
 
 
 **Step-2: Import the workflow:** 
