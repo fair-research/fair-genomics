@@ -84,7 +84,7 @@ An API key will allow you to access via web API. Please note that this key acts 
 ![Screenshot](images/GG-create-key.png)
 
 ### Using Python API
-<Working on it>
+Working on it
 
 ### Using Globus Genomics Web UI
 **Step-1: Login:** 
