@@ -118,6 +118,19 @@ The workflow will be submitting within Galaxy and all the tasks will be added to
 
 ## List of BDBags
 ### Input Data
+
+![Screenshot](images/BDBag-input-data.png)
+
 ### Outputs, Provenance and Performance
+
+![Screenshot](images/BDBag-outputs-data.png)
+
 ### Workflow, Tools and Tool wrappers
+
+![Screenshot](images/BDBag-RNAseq-workflow.png)
+![Screenshot](images/BDBag-tools-wrappers.png)
+
+
 ### Tools reference databases
+
+![Screenshot](images/BDBag-reference-genomes.png)
