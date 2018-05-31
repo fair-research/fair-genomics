@@ -13,7 +13,7 @@
 5. [List of BDBags](#list-of-bdbags)
     1. [Input Data](#input-data)
     1. [Outputs, Provenance and Performance](#outputs-provenance-and-performance)
-    1. [Workflow, Tools and Tool wrappers](#workflow-tools-and-wrapper)
+    1. [Workflow, Tools and Tool wrappers](#workflow-tools-and-wrappers)
     1. [Tools reference databases](#tools-reference-database)
 
 ## Introduction
