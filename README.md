@@ -73,6 +73,7 @@ In order to provide an end-to-end automation of running the TOPMed RNAseq pipeli
 And the last step in the pipline, "Create BDBag and MINID" takes the outputs of the workflow that are marked (orange stars in the above screenshot) and creates a new BDBag and generates a MINID for the bag. In addition to capturing the outputs of the analysis, this tools also collects provenance data in the form of actual command-lines with arguments that were used to run the tools, and performance metrics in the form of times taken to run the tools, and adds them to the new BDBag it creats. And example of the output BDBag is provided below under [section 5(ii).](#outputs-provenance-and-performance)
 
 ## End-to-end analysis using BDBags as inputs
+In this section we will describe how to access the TOPMed RNASeq pipeline from within Globus Genomics and run it using Globus 
 ### Authentication and Authorization
 ### Using Python API
 ### Using Globus Genomics Web UI
