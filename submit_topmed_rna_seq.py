@@ -1,3 +1,4 @@
+from __future__ import print_function
 from bioblend.galaxy import GalaxyInstance
 import time
 import optparse
@@ -41,10 +42,10 @@ wf_data['workflow_id'] = wf_mine['id']
 wf_data['ds_map'] = {}
 parameters = {}
 parameters['0'] = {'minid' : input_minid}
+parameters['5'] = {'historyid' : history['id'], 'userapi' : API_KEY, 'url' : URL}
 wf_data['parameters'] = parameters
 res = gi.workflows.invoke_workflow(wf_data['workflow_id'], wf_data['ds_map'], params=wf_data['parameters'], history_id=history['id'], import_inputs_to_history=False)
-print "SUBMITTED\t%s\t%s\t%s\t%s\t%s" % (input_minid, wf_mine['name'], wf_mine['id'], history_name, res['history_id'])
-
+print ("SUBMITTED\t%s\t%s\t%s\t%s\t%s" % (input_minid, wf_mine['name'], wf_mine['id'], history_name, res['history_id']))
 # loop until status is complete
 done = 0
 minid = None
@@ -57,11 +58,12 @@ while not done:
                 id = content['id']
                 dataset_content = gi.datasets.show_dataset(id)['peek']
                 minid = dataset_content.split("\t")[-1].split("<")[0]
+                print ("Your workflow is complete\nYour output MINID is: %s" % minid)
                 break
     elif state == 'error':
         done = 1
-        print "There was an error with your submission. Please check your data."
+        print ("There was an error with your submission. Please check your data.")
     else:
-        print "Workflow running: %s" % time.strftime("%a_%b_%d_%Y_%-I:%M:%S_%p",time.localtime(time.time()))
+        print ("Workflow running: %s" % (time.strftime("%a_%b_%d_%Y_%-I:%M:%S_%p",time.localtime(time.time()))))
         time.sleep(60)
     
