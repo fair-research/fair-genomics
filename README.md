@@ -144,7 +144,7 @@ Select the imported workflow from the "Workflow" menu item and click on "Run".
 
 ![Screenshot](images/GG-select-workflow-to-run.png)
 
-You will notice that the workflow only takes one input, the MINID for the [input data BDBag](#input-data): ark:/57799/b9f11t as shown in the screenshot below:
+You will notice that the workflow only takes one input, the MINID for the [input data BDBag](#input-data): ark:/57799/b9b128 as shown in the screenshot below:
 
 ![Screenshot](images/GG-run-workflow.png)
 
