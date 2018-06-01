@@ -90,7 +90,7 @@ We have created a python script that uses Galaxy's Bioblend API to run the workf
 
 Note: The python script requires the Access API Key generated in Step 2 above under Authentication and Authorization section.
 
-We have created a MINID for the Python script at: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92h64
+We have created a MINID for the Python script at: http://minid.bd2k.org/minid/landingpage/ark:/57799/b9n97q
 
 The Python script can run as follows:
 1. Create a Virtual Env:
