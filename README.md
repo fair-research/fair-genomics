@@ -19,7 +19,6 @@
     1. [Outputs, Provenance and Performance](#outputs-provenance-and-performance)
     1. [Workflow, Tools and Tool wrappers](#workflow-tools-and-tool-wrappers)
     1. [Tools reference databases](#tools-reference-databases)
-    1. [Python Script to submit the workflow](#python-script-for-workflow-submission)
 
 ## Introduction
 This README describes the implementation of TOPMed RNAseq analysis pipeline that uses BDBags and MINID within a Galaxy based Globus Genomics (GG) platform to support FAIR (Findable, Accessible, Interoperable, Reusable) research. We have implemented specific tools within GG that automate the use of MINIDs representing input databags and generate output BDBags along with provenance and performance metric that can be used to validate reproducibility.
@@ -87,7 +86,9 @@ An API key will allow you to access via web API. Please note that this key acts 
 ### Using Python API
 We have created a python script that uses Galaxy's Bioblend API to run the workflow. It takes the MINID as input and run the workflow, and polls the status until the analysis is completed. After completion, the script returns a MINID for the outputs BDBag created at the end of the analysis. Each analysis creates a new outputs BDBag. Users can use the returned MINID to compare the outputs against the Outputs BDBag with MINID [ark:/57799/b9x12j](#outputs-provenance-and-performance) shown below to verify the reproducibility of the results. 
 
-We have created a BDBag for the Python script at: [ark://](#python-script-for-workflow-submission)
+Note: The python script requires the Access API Key generated in Step 2 above under Authentication and Authorization section.
+
+We have created a MINID for the Python script at: 
 
 The Python script can run as follows:
 1. Create a Virtual Env:
@@ -99,7 +100,7 @@ $> source bioblend_env/bin/activate
 ```python
 $> pip install bioblend
 ```
-3. Download the Python script (using the BDBag or direct download)
+3. Download the Python script (using the Minid:  or direct download)
 ```
 $> wget https://raw.githubusercontent.com/fair-research/fair-genomics/master/submit_topmed_rna_seq.py
 $> python submit_topmed_rna_seq.py --help
@@ -123,8 +124,10 @@ Workflow running: Fri_Jun_01_2018_12:13:23_AM
 **Step-1: Login:** 
 Using Globus ID, login to the NIH-Commons Globus Genomics instance at: https://nihcommons.globusgenomics.org
 
+**Step-2: Create Access API Key**
+If you have not alredy done it (as per Authentication and Authorization section). Please create the access API Key from "User->Preferences->Manage API Key" in the top menu.
 
-**Step-2: Import the workflow:** 
+**Step-3: Import the workflow:** 
 From the top-menu, go to "Shared Data -> Workflows". Select the workflow named "RNA-seq-Gtex-stage1-v2.0-bags_transfer" and click "import" to import the workflow into you account. 
 
 ![Screenshot](images/GG-import-workflow.png)
@@ -134,7 +137,7 @@ You should see the imported workflow under the "Workflow" link from the top menu
 ![Screenshot](images/GG-imported-workflow.png)
 
 
-**Step-3: Run the workflow:** 
+**Step-4: Run the workflow:** 
 Select the imported workflow from the "Workflow" menu item and click on "Run".
 
 ![Screenshot](images/GG-select-workflow-to-run.png)
@@ -179,6 +182,5 @@ http://minid.bd2k.org/minid/landingpage/ark:/57799/b9ph5b
 
 ![Screenshot](images/BDBag-reference-genomes.png)
 
-### Python Script For Workflow Submission
 
 
