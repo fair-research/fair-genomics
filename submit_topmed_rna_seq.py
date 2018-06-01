@@ -58,6 +58,7 @@ while not done:
                 id = content['id']
                 dataset_content = gi.datasets.show_dataset(id)['peek']
                 minid = dataset_content.split("\t")[-1].split("<")[0]
+                print ("Your workflow is complete\nYour output MINID is: %s" % minid)
                 break
     elif state == 'error':
         done = 1
