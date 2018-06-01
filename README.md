@@ -84,7 +84,7 @@ An API key will allow you to access via web API. Please note that this key acts 
 ![Screenshot](images/GG-create-key.png)
 
 ### Using Python API
-
+We have c
 
 ### Using Globus Genomics Web UI
 **Step-1: Login:** 
@@ -114,12 +114,12 @@ Provide the MINID in the input text box of the first step in the workflow and cl
 
 ![Screenshot](images/GG-submit-success.png)
 
-The workflow will be submitting within Galaxy and all the tasks will be added to the history. The steps within the workflow will start running one after another based on the depencies. The first step in the workflow, "Get BDBag from MINID" will download the input sample represented by the BDBag ([ark:/57799/b9f11t](#input-data)). In this case, it is just one sample that is downloaed. After the download is complete, it will run all the steps one-by-one to complete the analysis and finally the "Create BDBag and MINID" step will run, that will create a new BDBag with all the outputs, provenance, and performance files in the bag. 
+The workflow will be submitting within Galaxy and all the tasks will be added to the history. The steps within the workflow will start running one after another based on the depencies. The first step in the workflow, "Get BDBag from MINID" will download the input sample represented by the BDBag ([ark:/57799/b9b128](#input-data)). In this case, it is just one sample that is downloaed. After the download is complete, it will run all the steps one-by-one to complete the analysis and finally the "Create BDBag and MINID" step will run, that will create a new BDBag with all the outputs, provenance, and performance files in the bag. 
 
 ## List of BDBags
 ### Input Data
 
-http://minid.bd2k.org/minid/landingpage/ark:/57799/b9f11t
+http://minid.bd2k.org/minid/landingpage/ark:/57799/b9b128
 
 ![Screenshot](images/BDBag-input-data.png)
 
