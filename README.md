@@ -89,7 +89,7 @@ We have created a python script that uses Galaxy's Bioblend API to run the workf
 
 Note: The python script requires the Access API Key generated in Step 2 above under Authentication and Authorization section.
 
-We have created a MINID for the Python script at: 
+We have created a MINID for the Python script at: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92h64
 
 The Python script can run as follows:
 1. Create a Virtual Env:
@@ -101,7 +101,7 @@ $> source bioblend_env/bin/activate
 ```python
 $> pip install bioblend
 ```
-3. Download the Python script (using the Minid:  or direct download)
+3. Download the Python script (using the Minid: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92h64 )
 ```
 $> wget https://raw.githubusercontent.com/fair-research/fair-genomics/master/submit_topmed_rna_seq.py
 $> python submit_topmed_rna_seq.py --help
