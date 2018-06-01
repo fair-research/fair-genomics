@@ -168,11 +168,11 @@ http://minid.bd2k.org/minid/landingpage/ark:/57799/b9x12j
 
 ### Workflow, Tools and Tool wrappers
 
-http://minid.bd2k.org/minid/landingpage/ark:/57799/b92q4f
+Workflow: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92q4f
 
 ![Screenshot](images/BDBag-RNAseq-workflow.png)
 
-http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690
+Tool Wrappers: http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690
 
 ![Screenshot](images/BDBag-tools-wrappers.png)
 
