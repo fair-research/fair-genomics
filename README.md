@@ -93,12 +93,12 @@ We have created a MINID for the Python script at: http://minid.bd2k.org/minid/la
 
 The Python script can run as follows:
 1. Create a Virtual Env:
-```python
+```
 $> virtualenv bioblend_env
 $> source bioblend_env/bin/activate
 ```
 2. Install Bioblend Module
-```python
+```
 $> pip install bioblend
 ```
 3. Download the Python script (using the Minid: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92h64 )
