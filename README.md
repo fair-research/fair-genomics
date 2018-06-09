@@ -189,7 +189,7 @@ http://minid.bd2k.org/minid/landingpage/ark:/57799/b9x12j
 
 Workflow: http://minid.bd2k.org/minid/landingpage/ark:/57799/b92q4f
 
-![Screenshot](images/BDBag-RNA-Seq-workflow.png)
+![Screenshot](images/BDBag-RNAseq-workflow.png)
 
 Tool Wrappers: http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690
 
