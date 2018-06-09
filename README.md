@@ -36,7 +36,7 @@ For each input sample, this RNA-Seq pipeline generates:
 
 ### Components
 The figure below describes the RNA-Seq pipeline and its components:
-![Screenshot](images/TOPMed-RNA-Seq-pipeline.png)
+![Screenshot](images/TOPMed-RNAseq-pipeline.png)
 
 We have wrapped the following versions of tools within Globus Genomics - Galaxy and we have made all the wrappers available within the [Tools BDBag](#workflow-tools-and-tool-wrappers) with MINID: [ark:/57799/b9t690](http://minid.bd2k.org/minid/landingpage/ark:/57799/b9t690)
 
