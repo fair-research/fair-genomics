@@ -36,3 +36,6 @@ In this README document, we will demonstrate our platform using the following sp
 7. Within the workspace we the submit the two output BDBag to the JupyterHub. 
 8. Within JupyterHub, we will access the results of the two analyses and will perform a differential expression analysis between the two sample datasets
 
+## User Login to FAIR Research Data Portal
+The FAIR Research data portal is available at: https://globus-portal.fair-research.org and users can login using their Globus ID.
+![Screenshot](images/globus-login.png)
