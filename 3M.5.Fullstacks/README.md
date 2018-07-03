@@ -3,10 +3,10 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 1. [Use Case](#use-case)
-    1. [Summary](#summary)
-    1. [Components](#components)
-    1. [Reference Files](#reference-files)
-    
+1. [User Login](#User-Login-to-FAIR-Research-Data-Portal)
+1. [Faceted Search](#faceted-search)
+    1. [Male Smokers with 4th Stage Lung Cancer](#male-smokers-with-4th-stage-lung-cancer)
+    1. [Female Non-Smokers with 4th Stage Lung Cancer](#female-non-smokers-with-4th-stage-lung-cancer)
     
 ## Introduction
 This README describes the implementation of a Fullstacks platform that allows a user to login, perform a faceted search and create a workspace to perform secondary and tertiary analysis using workflows and a Jupyter notebook. It allows us to do the following:
@@ -39,3 +39,21 @@ In this README document, we will demonstrate our platform using the following sp
 ## User Login to FAIR Research Data Portal
 The FAIR Research data portal is available at: https://globus-portal.fair-research.org and users can login using their Globus ID.
 ![Screenshot](images/globus-login.png)
+
+## Faceted Search
+Search for the keyword “lung” within the search box on the portal. That results in 159 samples. We will further refine the results to generate two sets of datasets:
+
+### Male Smokers with 4th Stage Lung Cancer
+By selecting the metadata check boxes: “Sex: Male”, “Smoking Status: Smoker”, “Stage: 4”, we get two samples. These are RNA-Seq transcriptomic datasets for lung tissue. The screenshot below shows the results:
+![Screenshot](images/search-male-smokers.png)
+
+Create a BDBag for the selected search results by clicking on the Create Cohort button. We will name the BDBag for this cohort of patients as “Test-Bag-M-S-S4”
+! [Screenshot](images/create-bdbag-from-query.png)
+
+### Female non-smokers with 4th Stage Lung Cancer
+Similarly, Create a BDBag for a cohort representing female non-smokers with 4th stage lung cancer. Let's name the BDBag "Test-Bag-F-NS-S4". 
+![Screenshot](images/search-female-non-smokers.png)
+
+
+
+
