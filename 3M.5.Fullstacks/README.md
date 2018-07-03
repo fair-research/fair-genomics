@@ -41,7 +41,7 @@ The FAIR Research data portal is available at: https://globus-portal.fair-resear
 ![Screenshot](images/globus-login.png)
 
 ## Faceted Search
-Search for the keyword “lung” within the search box on the portal. That results in 159 samples. We will further refine the results to generate two sets of datasets:
+The portal indexes lung cancer data available at: https://www.ebi.ac.uk/ena/data/view/PRJEB2784. This data includes metadata such as age, sex, cancer stage, smoking status, and tissue type. Search for the keyword “lung” within the search box on the portal. That results in 159 samples. We will further refine the results to generate two datasets each containing two samples.
 
 ### Male Smokers with 4th Stage Lung Cancer
 By selecting the metadata check boxes: “Sex: Male”, “Smoking Status: Smoker”, “Stage: 4”, we get two samples. These are RNA-Seq transcriptomic datasets for lung tissue. The screenshot below shows the results:
@@ -53,7 +53,6 @@ Create a BDBag for the selected search results by clicking on the Create Cohort 
 ### Female non-smokers with 4th Stage Lung Cancer
 Similarly, Create a BDBag for a cohort representing female non-smokers with 4th stage lung cancer. Let's name the BDBag "Test-Bag-F-NS-S4". 
 ![Screenshot](images/search-female-non-smokers.png)
-
 
 
 
