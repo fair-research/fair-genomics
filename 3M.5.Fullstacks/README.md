@@ -48,7 +48,7 @@ By selecting the metadata check boxes: “Sex: Male”, “Smoking Status: Smoke
 ![Screenshot](images/search-male-smokers.png)
 
 Create a BDBag for the selected search results by clicking on the Create Cohort button. We will name the BDBag for this cohort of patients as “Test-Bag-M-S-S4”
-! [Screenshot](images/create-bdbag-from-query.png)
+![Screenshot](images/create-bdbag-from-query.png)
 
 ### Female non-smokers with 4th Stage Lung Cancer
 Similarly, Create a BDBag for a cohort representing female non-smokers with 4th stage lung cancer. Let's name the BDBag "Test-Bag-F-NS-S4". 
