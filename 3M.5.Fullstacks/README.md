@@ -49,7 +49,7 @@ By selecting the metadata check boxes: “Sex: Male”, “Smoking Status: Smoke
 ![Screenshot](images/search-male-smokers.png)
 
 Create a BDBag for the selected search results by clicking on the Create Cohort button. We will name the BDBag for this cohort of patients as “Test-Bag-M-S-S4”
-![Screenshot](images/create-bdbag-from-query.png)
+![Screenshot](images/create-bdbag-from-query-M.png)
 
 ### Female non-smokers with 4th Stage Lung Cancer
 Similarly, Create a BDBag for a cohort representing female non-smokers with 4th stage lung cancer. Let's name the BDBag "Test-Bag-F-NS-S4". 
@@ -58,6 +58,7 @@ Similarly, Create a BDBag for a cohort representing female non-smokers with 4th 
 ## Analysis of Input Datasets using Workspace
 The portal allows to create Workspaces that can handle analyses of the datasets represented by the BDBags. A workspace can be used to access all the input data bags as well as output data bags from the results of analysis. In this example, we will create a Workspace for each of the the two input bags created in the previous section and analyze using the TOPMed RNA-Seq pipeline within Globus Genomics. The outputs of the RNA-Seq analysis pipeline for both the datasets are then accessed as BDBags (MINIDs) within the workspace. Both the output bags are submitted to the JupyterHub for further downstream analysis using tools such as DeSeq for differential expression analysis of the two datasets.
 We used the TOPMed RNA-Seq pipeline that is show below. More details can be found at: https://github.com/broadinstitute/gtex-pipeline/blob/master/TOPMed_RNAseq_pipeline.md 
-![Screenshot](images/ TOPMed-RNAseq-pipeline.png)
+
+![Screenshot](images/TOPMed-RNAseq-pipeline.png)
 
 
