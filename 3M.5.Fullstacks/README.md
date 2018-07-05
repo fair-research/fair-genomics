@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 1. [Use Case](#use-case)
-1. [User Login](#User-Login-to-FAIR-Research-Data-Portal)
+1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
 1. [Faceted Search](#faceted-search)
     1. [Male Smokers with 4th Stage Lung Cancer](#male-smokers-with-4th-stage-lung-cancer)
     1. [Female Non-Smokers with 4th Stage Lung Cancer](#female-non-smokers-with-4th-stage-lung-cancer)
