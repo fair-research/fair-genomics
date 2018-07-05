@@ -25,7 +25,7 @@ This README describes the implementation of a Fullstacks platform that allows a 
 * Get the analysis results back into the workspace as a MINID representing a BDBag of outputs. 
 * Submit the results to JupyterHub for further interactive downstream analysis
 
-We built upon the previous month deliverable (2M.1 Fullstacks) to introduce many new features in this month’s deliverable. 
+We built upon the previous month's deliverable (2M.1 Fullstacks) to introduce many new features in this month’s deliverable. 
 * We added a new portal that indexes metadata on various transcriptome RNA samples from lung cancer studies. 
 * We added workspace concept within the portal that allows a user to create and manage datasets in the form of BDBags represented by MINID as identifiers; the workspace also allows to perform analytical operations using other tools and platforms such as Globus Genomics and JupyterHub 
 * Within the Globus Genomics component that allows analysis of the RNA-Seq data, we introduced a new feature to translate a BDBag into a Galaxy data collection to allow multi-sample analysis in parallel using AWS compute resources
