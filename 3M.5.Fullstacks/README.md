@@ -8,7 +8,12 @@
     1. [Male Smokers with 4th Stage Lung Cancer](#male-smokers-with-4th-stage-lung-cancer)
     1. [Female Non-Smokers with 4th Stage Lung Cancer](#female-non-smokers-with-4th-stage-lung-cancer)
 1. [Analysis of Input Datasets using Workspace](#analysis-of-input-datasets-using-workspace)
-
+    1. [TOPMed RNA-Seq analysis pipeline](#topmed-rna-seq-analysis-pipeline)
+    1. [Analysis using Globus Genomics](#analysis-using-globus-genomics)
+    1. [Analysis using JupyterHub](#analysis-using-jupyterhub)
+    1. [Results of Analysis](#results-of-analysis)
+    
+    
 
 ## Introduction
 This README describes the implementation of a Fullstacks platform that allows a user to login, perform a faceted search and create a workspace to perform secondary and tertiary analysis using workflows and a Jupyter notebook. It allows us to do the following:
@@ -93,3 +98,152 @@ We are running a JupyterHub server at: https://jupyterhub.fair-research.org/ It 
 
 We will use the following R-Code with JupyterHub:
 
+```R
+library("DESeq2")
+library("tximport")
+library("vsn")
+male_directory <-"/mnt/GCS/sulakhe/galaxy/files/output_bdbags_data/topmed_history_Fri_Jun_29_2018_4:59:59_PM_1_15303011813597"
+female_directory <-"/mnt/GCS/sulakhe/galaxy/files/output_bdbags_data/topmed_history_Fri_Jun_29_2018_9:49:42_PM_1_15303220907069"
+sampleFiles_male<-grep('gene_abundance',list.files(male_directory,full.names=TRUE),value=TRUE)
+sampleFiles_female<-grep('gene_abundance',list.files(female_directory,full.names=TRUE),value=TRUE)
+sampleCondition_male <- c('male','male')
+sampleCondition_female <- c('female','female')
+sampleFiles <- c(sampleFiles_male, sampleFiles_female)
+sampleCondition <- c(sampleCondition_male, sampleCondition_female)
+sampleTable<-data.frame(sampleName=sampleFiles, fileName=sampleFiles, condition=sampleCondition)
+
+df <- tximport(sampleFiles,type = "rsem",txIn=TRUE, txOut=TRUE)
+ddsTx <- DESeqDataSetFromTximport(df,sampleTable, ~condition)
+dds<-DESeq(ddsTx)
+res<-results(dds)
+res<-res[order(res$padj),]
+
+res
+
+plotMA(dds,ylim=c(-50,50),main='DESeq2')
+
+rld<- rlogTransformation(dds, blind=TRUE)
+vsd<-varianceStabilizingTransformation(dds, blind=TRUE)
+
+ddsClean <- replaceOutliersWithTrimmedMean(dds)
+ddsClean <- DESeq(ddsClean)
+tab <- table(initial = results(dds)$padj < .1,
+cleaned = results(ddsClean)$padj < .1)
+addmargins(tab)
+write.csv(as.data.frame(tab),file='sim_condition_treated_results_cleaned_summary_deseq2.csv')
+resClean <- results(ddsClean)
+
+write.csv(as.data.frame(resClean),file='sim_condition_treated_results_cleaned_deseq2.csv')
+
+plotDispEsts(dds)
+```
+
+### Results of Analysis
+Following is the log and the results from the JupyterHub notebook after running the above code:
+
+```
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colMeans, colnames,
+    colSums, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, lengths, Map, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max, which.min
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:base’:
+
+    apply
+
+reading in files with read.delim (install 'readr' package for speed up)
+1 2 3 4 
+using counts and average transcript lengths from tximport
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+log2 fold change (MLE): condition male vs female 
+Wald test p-value: condition male vs female 
+DataFrame with 31848 rows and 6 columns
+       baseMean log2FoldChange     lfcSE       stat       pvalue         padj
+      <numeric>      <numeric> <numeric>  <numeric>    <numeric>    <numeric>
+28270 4997.7888      -6.067948 0.5795112 -10.470803 1.176408e-25 1.959072e-21
+13827  783.9975      -5.794914 0.6014809  -9.634411 5.721937e-22 4.764371e-18
+31704  670.8651       9.049942 0.9968458   9.078577 1.100033e-19 6.106282e-16
+24251 1696.0634       7.258094 0.8749475   8.295462 1.081642e-16 4.503147e-13
+10706  606.2541      -5.295566 0.6513884  -8.129659 4.304995e-16 1.433822e-12
+...         ...            ...       ...        ...          ...          ...
+9986   2.600006      2.8804327  3.152590  0.9136717    0.3608894           NA
+9994   0.126198      0.7588478  4.962973  0.1529018    0.8784757           NA
+9995   0.000000             NA        NA         NA           NA           NA
+9998   1.993957      1.1239091  3.449566  0.3258117    0.7445668           NA
+9999   0.000000             NA        NA         NA           NA           NA
+using pre-existing normalization factors
+estimating dispersions
+found already estimated dispersions, replacing these
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+
+        FALSE	TRUE	Sum
+FALSE	16215	0	  16215
+TRUE	0	   438	  438
+Sum	   16215   438	  16653
+```
+![Screenshot](images/deseq-1.png)
+![Screenshot](images/deseq-2.png)
