@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-1. [Topmed RNA-Seq workflow](#topmed-rnaseq-workflow)
+1. [Topmed RNA-Seq workflow](#topmed-rna-seq-workflow)
     1. [Summary](#summary)
     1. [Components](#components)
     1. [Reference Files](#reference-files)
