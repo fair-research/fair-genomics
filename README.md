@@ -9,7 +9,7 @@
 1. [Integration of Minids and BDBags](#integration-of-minids-and-bdbags)
     1. [Get Data using MINID](#get-bdbag-using-minid)
     1. [Publish Results using BDBag MINID](#publish-results-using-bdbag-and-minid)
-    1. [Integrate BDBags/Minids with the Topmed RNA-Seq workflow](#integrate-bdbags-and-minids-with-topmed-rnaseq-workflow)
+    1. [Integrate BDBags/Minids with the Topmed RNA-Seq workflow](#integrate-bdbags-and-minids-with-topmed-rna-seq-workflow)
 4. [End-to-end analysis using BDBags as inputs](#end-to-end-analysis-using-bdbags-as-inputs)
     1. [Authentication and Authorization](#authentication-and-authorization)
     1. [Using Python API](#using-python-api)
