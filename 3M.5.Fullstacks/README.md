@@ -51,8 +51,15 @@ The FAIR Research data portal is available at: https://globus-portal.fair-resear
 The portal indexes lung cancer data available at: https://www.ebi.ac.uk/ena/data/view/PRJEB2784. This data includes metadata such as age, sex, cancer stage, smoking status, and tissue type. Search for the keyword “lung” within the search box on the portal. That results in 159 samples. We will further refine the results to generate two datasets each containing two samples.
 
 ### Male Smokers with 4th Stage Lung Cancer
+
 By selecting the metadata check boxes: “Sex: Male”, “Smoking Status: Smoker”, “Stage: 4”, we get two samples. These are RNA-Seq transcriptomic datasets for lung tissue. The screenshot below shows the results:
 ![Screenshot](images/search-male-smokers.png)
+
+#### Possible Error
+
+If you see an error message like the one below, you will need to go to https://www.globus.org/app/account and click "Update Your Profile" and set your email.
+
+![Screenshot](images/create-bdbag-from-query-error.png)
 
 Create a BDBag for the selected search results by clicking on the Create Cohort button. We will name the BDBag for this cohort of patients as “Test-Bag-M-S-S4”
 ![Screenshot](images/create-bdbag-from-query-M.png)
