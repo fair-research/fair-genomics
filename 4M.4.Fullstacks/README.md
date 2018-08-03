@@ -137,7 +137,7 @@ Below is an example of the JSON payload used to do a POST request to the WES at 
 ```
 #### CURL Commands
 
-Here are the 5 command-line curl statements for submitting the 5 Downsampled CRAM input files. Replace the <TOKEN> with the token generated in the previous section:
+Here are the 5 command-line curl statements for submitting the 5 Downsampled CRAM input files. Replace the `<TOKEN>` with the token generated in the previous section:
     
 **Downsample CRAM/CRAI ID Number: NWD176325, NA19238:** 
 
