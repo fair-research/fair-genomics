@@ -1,7 +1,7 @@
 # 4M.4.FULLSTACKS: Cross-stack Compute
 
 ## Table of Contents
-1. [Quickstart Tutorial] (#quickstart-tutorial)
+1. [Quickstart Tutorial](#quickstart-tutorial)
 1. [Introduction](#introduction)
 1. [Use Case](#use-case)
 1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
@@ -24,4 +24,5 @@ This quickstart tutorial walks through a quick submission of 5 downsampled TOPMe
 * Then click on the "Start" button for each input CRAM file to initiate the alignment workflow using Globus Genomics backend.
 * Typically, after 20-25mins, the analysis of the 5 downsampled inputs should be completed and you should see the resulting BDBag-Minid under the "Output files" column of the workspace. 
 The picture below shows a screenshot of the workspace used for the analysis of the 5 input CRAM files
+
 ![Screenshot](images/downsample-outputs.png)
