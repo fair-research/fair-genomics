@@ -4,10 +4,12 @@
 1. [Quickstart Tutorial](#quickstart-tutorial)
 1. [Introduction](#introduction)
 1. [Use of Globus Auth Token](#use-of-globus-auth-token)
-1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
-1. [Faceted Search](#faceted-search)
-    1. [Male Smokers with 4th Stage Lung Cancer](#male-smokers-with-4th-stage-lung-cancer)
-    1. [Female Non-Smokers with 4th Stage Lung Cancer](#female-non-smokers-with-4th-stage-lung-cancer)
+1. [Analysis of 5 Downsampled CRAM inputs](#analysis-of-5-downsampled-cram-inputs)
+    1. [Using Data Portal](#using-data-portal)
+        1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
+        1. [Search Downsampled CRAM](#search)
+        1. [Submit Samples](#submit)
+    1. [Using CURL from command line](#using-curl-from-command-line)
 1. [Analysis of Input Datasets using Workspace](#analysis-of-input-datasets-using-workspace)
     1. [TOPMed RNA-Seq analysis pipeline](#topmed-rna-seq-analysis-pipeline)
     1. [Analysis using Globus Genomics](#analysis-using-globus-genomics)
@@ -47,8 +49,15 @@ One of the highlights of this deliverable is the use of Globus Auth tokens inste
 
 We demonstrate this feature by using the data portal that uses Globus authentication to login. And the portal submits the CWL workflows to the WES interface with the Globus auth tokens in the headers that have the Globus Genomics application scope for further validation. 
 
-## User Login to FAIR Research Data Portal
+## Analysis of 5 Downsampled CRAM inputs
+
+### Using Data Portal
+#### User Login to FAIR Research Data Portal
 The FAIR Research data portal is available at: https://globus-portal.fair-research.org and users can login using their Globus ID.
 ![Screenshot](images/globus-login.png)
 
-## Analysis of 5 Downsampled CRAM inputs
+#### Search
+
+#### Submit
+
+### Using CURL from command line
