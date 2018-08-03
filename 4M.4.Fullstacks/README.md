@@ -104,8 +104,9 @@ so you may request a token and submit samples using any registered Globus app.
 Starting from scratch requires three steps:
 
 1. Register a Globus App at https://developers.globus.org
-2. Configure your app to request the NIH Commons scope (Example Here).
-3. Login to receive your token.
+2. Configure your app to request the NIH Commons scope
+    * Example here: https://github.com/fair-research/fair-genomics/blob/master/4M.4.Fullstacks/sample_app.py
+3. Login to receive your token
 
 
 #### JSON Payloads
