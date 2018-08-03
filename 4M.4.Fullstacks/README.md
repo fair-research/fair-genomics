@@ -4,17 +4,16 @@
 1. [Quickstart Tutorial](#quickstart-tutorial)
 1. [Introduction](#introduction)
 1. [Use of Globus Auth Token](#use-of-globus-auth-token)
+1. [Globus Genomics WES Interface](#globus-genomics-wes-interface)
 1. [Analysis of 5 Downsampled CRAM inputs](#analysis-of-5-downsampled-cram-inputs)
     1. [Using Data Portal](#using-data-portal)
         1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
         1. [Search Downsampled CRAM](#search)
         1. [Submit Samples](#submit)
     1. [Using CURL from command line](#using-curl-from-command-line)
-1. [Analysis of Input Datasets using Workspace](#analysis-of-input-datasets-using-workspace)
-    1. [TOPMed RNA-Seq analysis pipeline](#topmed-rna-seq-analysis-pipeline)
-    1. [Analysis using Globus Genomics](#analysis-using-globus-genomics)
-    1. [Analysis using JupyterHub](#analysis-using-jupyterhub)
-    1. [Results of Analysis](#results-of-analysis)
+        1. [Get Globus Token](#get-globus-token)
+        1. [JSON Payloads for the 5 downsampled CRAM files](#json-paylods)
+        1. [CURL Commands for the 5 downsampled CRAM files](#curl-commands)
     
 ## Quickstart Tutorial
 This quickstart tutorial walks through a quick submission of 5 downsampled TOPMed CRAM input files using a TOPMed Alignment workflow in CWL. It uses a portal to index and search the input datasets and submits to a WES (Workflow Execution Service - GA4GH) service deployed as a shim-layer on the Galaxy based Globus Genomics platform.
@@ -49,6 +48,20 @@ One of the highlights of this deliverable is the use of Globus Auth tokens inste
 
 We demonstrate this feature by using the data portal that uses Globus authentication to login. And the portal submits the CWL workflows to the WES interface with the Globus auth tokens in the headers that have the Globus Genomics application scope for further validation. 
 
+## Globus Genomics WES Interface
+The GA4GH specificaions for the Workflow Execution Service is available as Swagger UI at: http://ga4gh.github.io/workflow-execution-service-schemas/
+The Globus Genomics WES service is implemented to the above specication and the available at: https://nihcommons.globusgenomics.org/wes/service-info
+
+The resources implemented in this WES are:
+GET: /service-info
+GET: /workflows
+POST: /workflows
+GET: /workflows/<workflow-id>
+DELETE: /workflows/<workflow-id>
+GET: /workflows/<workflow-id>/status
+
+Detailed descriptions and usage of each resource is available at: http://ga4gh.github.io/workflow-execution-service-schemas/
+
 ## Analysis of 5 Downsampled CRAM inputs
 
 ### Using Data Portal
@@ -57,7 +70,24 @@ The FAIR Research data portal is available at: https://globus-portal.fair-resear
 ![Screenshot](images/globus-login.png)
 
 #### Search
+The downsampled CRAM files have an annotations of "downsampled" within the data portal. Use the search term "downsampled" in the search box at: https://globus-portal.fair-research.org/search/ 
+
+Select the checkbox next to "downsampled" in the left hand menu as shown in the screenshot below. 
+![Screenshot](images/search-downsampled.png)
+
+Click on the "Add Minids" button to add the 5 samples to a "Workspace" collection called "Downsampled Topmed" as shown below. 
 
 #### Submit
+From within the Workspace, click on each "Start" button to initiate a submission to the WES service.
+![Screenshot](images/downsample-submit.png)
+
 
 ### Using CURL from command line
+#### Get Globus Token
+#### JSON Payloads
+#### CURL Commands
+#### Check Status
+
+
+
+
