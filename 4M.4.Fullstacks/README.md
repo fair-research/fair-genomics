@@ -97,6 +97,17 @@ These downsampled CRAMs, typically take about 20-25mins to complete the analysis
 
 ### Using CURL from command line
 #### Get Globus Token
+
+The WES API exists as a public Resource Server secured with Globus Auth,
+so you may request a token and submit samples using any registered Globus app.
+
+Starting from scratch requires three steps:
+
+1. Register a Globus App at https://developers.globus.org
+2. Configure your app to request the NIH Commons scope (Example Here).
+3. Login to receive your token.
+
+
 #### JSON Payloads
 For each of the 5 downsampled CRAM inputs, the three reference files (reference_genome, bwa_index and dbsnp) will be same. Please note the minids for these 3 reference files within the JSON payload example below
 
