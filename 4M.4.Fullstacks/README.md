@@ -10,6 +10,7 @@
         1. [User Login to FAIR Research Data Portal](#user-login-to-fair-research-data-portal)
         1. [Search Downsampled CRAM](#search)
         1. [Submit Samples](#submit)
+        1. [Status](#status)
     1. [Using CURL from command line](#using-curl-from-command-line)
         1. [Get Globus Token](#get-globus-token)
         1. [JSON Payloads for the 5 downsampled CRAM files](#json-payloads)
