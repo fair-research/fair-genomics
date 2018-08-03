@@ -12,7 +12,7 @@
         1. [Submit Samples](#submit)
     1. [Using CURL from command line](#using-curl-from-command-line)
         1. [Get Globus Token](#get-globus-token)
-        1. [JSON Payloads for the 5 downsampled CRAM files](#json-paylods)
+        1. [JSON Payloads for the 5 downsampled CRAM files](#json-payloads)
         1. [CURL Commands for the 5 downsampled CRAM files](#curl-commands)
     
 ## Quickstart Tutorial
@@ -53,12 +53,12 @@ The GA4GH specificaions for the Workflow Execution Service is available as Swagg
 The Globus Genomics WES service is implemented to the above specication and the available at: https://nihcommons.globusgenomics.org/wes/service-info
 
 The resources implemented in this WES are:
-GET: /service-info
-GET: /workflows
-POST: /workflows
-GET: /workflows/<workflow-id>
-DELETE: /workflows/<workflow-id>
-GET: /workflows/<workflow-id>/status
+- GET: /service-info
+- GET: /workflows
+- POST: /workflows
+- GET: /workflows/<workflow-id>
+- DELETE: /workflows/<workflow-id>
+- GET: /workflows/<workflow-id>/status
 
 Detailed descriptions and usage of each resource is available at: http://ga4gh.github.io/workflow-execution-service-schemas/
 
@@ -88,9 +88,74 @@ From within the Workspace, click on each "Start" button to initiate a submission
 ### Using CURL from command line
 #### Get Globus Token
 #### JSON Payloads
+For each of the 5 downsampled CRAM inputs, the three reference files (reference_genome, bwa_index and dbsnp) will be same. Please note the minids for these 3 reference files within the JSON payload example below
+
+The input minids for the 5 downsampled CRAMs are: 
+- Downsample CRAM/CRAI ID Number: NWD176325, NA19238 -- ark:/99999/fk4U4TyRAKafWMB
+- Downsample CRAM/CRAI ID Number: NWD136397, HG01110 -- ark:/99999/fk456x1jMoFxfKB
+- Downsample CRAM/CRAI ID Number: NWD119836, NA12878 -- ark:/99999/fk4cAzlMXIUOfes
+- Downsample CRAM/CRAI ID Number: NWD315403, HG01249 -- ark:/99999/fk41FSiqz9iY58R1
+- Downsample CRAM/CRAI ID Number: NWD231092, HG01111 -- ark:/99999/fk4jVBacAVBkFsL
+
+Below is an example of the JSON payload used to do a POST request to the WES at https://nihcommons.globusgenomics.org/wes/workflows 
+
+```
+{
+  "workflow_params": {
+    "reference_genome": {
+      "class": "File",
+      "path": "ark:/99999/fk4aZVT0ZWH8Ip0"
+    },
+    "bwa_index": {
+      "class": "File",
+      "path": "ark:/99999/fk4erydOcxk7PA2"
+    },
+    "dbsnp": {
+      "class": "File",
+      "path": "ark:/99999/fk4zKBK8XkAnaXQ"
+    },
+    "input_file": {
+      "class": "File",
+      "path": "ark:/99999/fk4U4TyRAKafWMB"
+    }
+  },
+  "workflow_descriptor": "TOPMed Alignment Workflow",
+  "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl",
+  "workflow_type_version": "v1.0",
+  "workflow_type": "CWL"
+}
+```
 #### CURL Commands
+
+Here are the 5 command-line curl statements for submitting the 5 Downsampled CRAM input files. Replace the <TOKEN> with the token generated in the previous section:
+    
+**Downsample CRAM/CRAI ID Number: NWD176325, NA19238:** 
+
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk4U4TyRAKafWMB"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
+
+**Downsample CRAM/CRAI ID Number: NWD315403, HG01249:**
+
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk41FSiqz9iY58R1"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
+
+
+**Downsample CRAM/CRAI ID Number: NWD136397, HG01110:** 
+
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk456x1jMoFxfKB"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
+
+**Downsample CRAM/CRAI ID Number: NWD231092, HG01111:**
+
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk4jVBacAVBkFsL"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
+    
+**Downsample CRAM/CRAI ID Number: NWD119836, NA12878:**
+
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk4cAzlMXIUOfes"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
+    
+
+These curl commands return a tracking ID (worflow-id) that can be used to check the status, as shown in the next section.
+
 #### Check Status
+The WES resources for a detailed status, also provides the MINDs for the output BDBag once the anlysis is complete. You can 
 
-
+    curl -H "Accept: application/json" -H "Content-Type: application/json" -X GET -H "Authorization: <TOKEN>" https://nihcommons.globusgenomics.org/wes/workflows/<workflow-id>
 
 
