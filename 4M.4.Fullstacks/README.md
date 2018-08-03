@@ -14,7 +14,10 @@
         1. [Get Globus Token](#get-globus-token)
         1. [JSON Payloads for the 5 downsampled CRAM files](#json-payloads)
         1. [CURL Commands for the 5 downsampled CRAM files](#curl-commands)
-    
+
+1. [Results](#results)
+
+
 ## Quickstart Tutorial
 This quickstart tutorial walks through a quick submission of 5 downsampled TOPMed CRAM input files using a TOPMed Alignment workflow in CWL. It uses a portal to index and search the input datasets and submits to a WES (Workflow Execution Service - GA4GH) service deployed as a shim-layer on the Galaxy based Globus Genomics platform.
 
@@ -157,5 +160,18 @@ These curl commands return a tracking ID (worflow-id) that can be used to check 
 The WES resources for a detailed status, also provides the MINDs for the output BDBag once the anlysis is complete. You can 
 
     curl -H "Accept: application/json" -H "Content-Type: application/json" -X GET -H "Authorization: <TOKEN>" https://nihcommons.globusgenomics.org/wes/workflows/<workflow-id>
+
+
+## Results
+Following table provides the results of analysis with md5sum for the output, along with time taken and cost of analysis. Please note that the md5sum are calculated after removing the headers from the output CRAM file, so that the md5sum can be compared with the results from other fullstacks. 
+
+| Downsample Inputs | md5sum                          | Runtime | Cost($) |
+|-------------------|---------------------------------|---------|---------|
+|NWD119836          |105bf65c2e4ea23f7a110bee17c1a074 | 19mins  | 0.036   |
+|NWD136397          |c8bab3ba0f90406a035cabb243716356 | 19mins  | 0.036   |
+|NWD176325          |186d2cdf1efdc2746e6d3b26cd887c0a | 19mins  | 0.036   |
+|NWD231092          |4ac1e5edc1fd9d0644d2c0082ac02392 | 19mins  | 0.036   |
+|NWD315403          |efda0cdef1e172f495052a62a93d799c | 19mins  | 0.036   |
+
 
 
