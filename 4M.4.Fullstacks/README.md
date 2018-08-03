@@ -15,7 +15,7 @@
         1. [JSON Payloads for the 5 downsampled CRAM files](#json-payloads)
         1. [CURL Commands for the 5 downsampled CRAM files](#curl-commands)
 
-1. [Results](#results)
+    1. [Results](#results)
 
 
 ## Quickstart Tutorial
