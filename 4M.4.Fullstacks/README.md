@@ -53,8 +53,8 @@ One of the highlights of this deliverable is the use of Globus Auth tokens inste
 We demonstrate this feature by using the data portal that uses Globus authentication to login. And the portal submits the CWL workflows to the WES interface with the Globus auth tokens in the headers that have the Globus Genomics application scope for further validation. 
 
 ## Globus Genomics WES Interface
-The GA4GH specificaions for the Workflow Execution Service is available as Swagger UI at: http://ga4gh.github.io/workflow-execution-service-schemas/
-The Globus Genomics WES service is implemented to the above specication and the available at: https://nihcommons.globusgenomics.org/wes/service-info
+GA4GH specifications for the Workflow Execution Service is available as Swagger UI at: http://ga4gh.github.io/workflow-execution-service-schemas/
+The Globus Genomics WES service is implemented to the above specification and the available at: https://nihcommons.globusgenomics.org/wes/service-info
 
 The resources implemented in this WES are:
 - GET: /service-info
@@ -161,10 +161,10 @@ Here are the 5 command-line curl statements for submitting the 5 Downsampled CRA
     curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -H "Authorization: <TOKEN>" '{"workflow_params": {"reference_genome": {"class": "File", "path": "ark:/99999/fk4aZVT0ZWH8Ip0"}, "bwa_index": {"class": "File", "path": "ark:/99999/fk4erydOcxk7PA2"}, "dbsnp": {"class": "File", "path": "ark:/99999/fk4zKBK8XkAnaXQ"}, "input_file": {"class": "File", "path": "ark:/99999/fk4cAzlMXIUOfes"}}, "workflow_descriptor": "TOPMed Alignment Workflow", "workflow_url": "https://raw.githubusercontent.com/DataBiosphere/topmed-workflows/master/aligner/sbg-alignment-cwl/topmed-alignment.cwl", "workflow_type_version": "v1.0", "workflow_type": "CWL"}' https://nihcommons.globusgenomics.org/wes/workflows
     
 
-These curl commands return a tracking ID (worflow-id) that can be used to check the status, as shown in the next section.
+These curl commands return a tracking ID (workflow-id) that can be used to check the status, as shown in the next section.
 
 #### Check Status
-The WES resources for a detailed status, also provides the MINDs for the output BDBag once the anlysis is complete. You can 
+The WES resources for a detailed status, also provides the MINDs for the output BDBag once the analysis is complete. You can 
 
     curl -H "Accept: application/json" -H "Content-Type: application/json" -X GET -H "Authorization: <TOKEN>" https://nihcommons.globusgenomics.org/wes/workflows/<workflow-id>
 
