@@ -54,15 +54,15 @@ We demonstrate this feature by using the data portal that uses Globus authentica
 
 ## Globus Genomics WES Interface
 GA4GH specifications for the Workflow Execution Service is available as Swagger UI at: http://ga4gh.github.io/workflow-execution-service-schemas/
-The Globus Genomics WES service is implemented to the above specification and the available at: https://nihcommons.globusgenomics.org/wes/service-info
+The Globus Genomics WES service is implemented to the above specification and is available at: https://nihcommons.globusgenomics.org/wes/
 
 The resources implemented in this WES are:
 - GET: /service-info
 - GET: /workflows
 - POST: /workflows
-- GET: /workflows/<workflow-id>
-- DELETE: /workflows/<workflow-id>
-- GET: /workflows/<workflow-id>/status
+- GET: /workflows/{workflow-id}
+- DELETE: /workflows/{workflow-id}
+- GET: /workflows/{workflow-id}/status
 
 Detailed descriptions and usage of each resource is available at: http://ga4gh.github.io/workflow-execution-service-schemas/
 
