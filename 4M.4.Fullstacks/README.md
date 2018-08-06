@@ -25,9 +25,9 @@ This quickstart tutorial walks through a quick submission of 5 downsampled TOPMe
 * Got to the 4M.4.Fullstacks demo page at https://globus-portal.fair-research.org/4M.4.Fullstacks/ and Login using your Globus credentials
 * Click on the Search link and search for the 5 downsampled input CRAM files using the search tag "downsampled"
 * Select the 5 samples by checking the box next to "downsampled" in the left menu
-* Click on "Add Minids" button, which creates a Workspace called "Downsampled Topmed" and adds these 5 samples for analysis
+* Click on "Create Workspace" button, to create a workspace called "Downsampled Topmed". It adds the selected samples to the workspace for analysis
 * Then click on the "Start" button for each input CRAM file to initiate the alignment workflow using Globus Genomics backend.
-* Typically, after 20-25mins, the analysis of the 5 downsampled inputs should be completed and you should see the resulting BDBag-Minid under the "Output files" column of the workspace. 
+* Typically, after 20-25mins, the analysis of the 5 downsampled inputs should be completed and you should see the resulting BDBag-Minid under the "Output files" column of the workspace
 The picture below shows a screenshot of the workspace used for the analysis of the 5 input CRAM files
 
 ![Screenshot](images/downsample-outputs.png)
