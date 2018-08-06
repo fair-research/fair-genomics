@@ -22,12 +22,12 @@
 ## Quickstart Tutorial
 This quickstart tutorial walks through a quick submission of 5 downsampled TOPMed CRAM input files using a TOPMed Alignment workflow in CWL. It uses a portal to index and search the input datasets and submits to a WES (Workflow Execution Service - GA4GH) service deployed as a shim-layer on the Galaxy based Globus Genomics platform.
 
-* Login to the search portal at: https://globus-portal.fair-research.org/search/ using your Globus credentials
-* Search for the 5 downsampled input CRAM files using the search tag "downsampled"
+* Got to the 4M.4.Fullstacks demo page at https://globus-portal.fair-research.org/4M.4.Fullstacks/ and Login using your Globus credentials
+* Click on the Search link and search for the 5 downsampled input CRAM files using the search tag "downsampled"
 * Select the 5 samples by checking the box next to "downsampled" in the left menu
-* Click on "Add Minids" button, which creates a Workspace called "Downsampled Topmed" and adds these 5 samples for analysis
+* Click on "Create Workspace" button, to create a workspace called "Downsampled Topmed". It adds the selected samples to the workspace for analysis
 * Then click on the "Start" button for each input CRAM file to initiate the alignment workflow using Globus Genomics backend.
-* Typically, after 20-25mins, the analysis of the 5 downsampled inputs should be completed and you should see the resulting BDBag-Minid under the "Output files" column of the workspace. 
+* Typically, after 20-25mins, the analysis of the 5 downsampled inputs should be completed and you should see the resulting BDBag-Minid under the "Output files" column of the workspace
 The picture below shows a screenshot of the workspace used for the analysis of the 5 input CRAM files
 
 ![Screenshot](images/downsample-outputs.png)
@@ -54,15 +54,15 @@ We demonstrate this feature by using the data portal that uses Globus authentica
 
 ## Globus Genomics WES Interface
 GA4GH specifications for the Workflow Execution Service is available as Swagger UI at: http://ga4gh.github.io/workflow-execution-service-schemas/
-The Globus Genomics WES service is implemented to the above specification and the available at: https://nihcommons.globusgenomics.org/wes/service-info
+The Globus Genomics WES service is implemented to the above specification and is available at: https://nihcommons.globusgenomics.org/wes/
 
 The resources implemented in this WES are:
 - GET: /service-info
 - GET: /workflows
 - POST: /workflows
-- GET: /workflows/<workflow-id>
-- DELETE: /workflows/<workflow-id>
-- GET: /workflows/<workflow-id>/status
+- GET: /workflows/{workflow-id}
+- DELETE: /workflows/{workflow-id}
+- GET: /workflows/{workflow-id}/status
 
 Detailed descriptions and usage of each resource is available at: http://ga4gh.github.io/workflow-execution-service-schemas/
 
