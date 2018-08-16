@@ -19,8 +19,8 @@
     1. [Results](#results)
 
 
-## Quickstart Tutorial
-This quickstart tutorial walks through a quick submission of 5 downsampled TOPMed CRAM input files using a TOPMed Alignment workflow in CWL. It uses a portal to index and search the input datasets and submits to a WES (Workflow Execution Service - GA4GH) service deployed as a shim-layer on the Galaxy based Globus Genomics platform.
+## Quickstart Tutoriala
+This quickstart tutorial walks through submission of 5 downsampled TOPMed CRAM input files using a TOPMed Alignment workflow in CWL. It uses a portal to index and search the input datasets and submits to a WES (Workflow Execution Service - GA4GH) service deployed as a shim-layer on the Galaxy based Globus Genomics platform.
 
 * Got to the 4M.4.Fullstacks demo page at https://globus-portal.fair-research.org/4M.4.Fullstacks/ and Login using your Globus credentials
 * Click on the Search link and search for the 5 downsampled input CRAM files using the search tag "downsampled"
