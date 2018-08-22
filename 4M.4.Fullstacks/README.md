@@ -41,7 +41,7 @@ This README describes the implementation of a fullstacks platform that allows to
 * Use of Globus auth tokens for user access and user management in Galaxy within Globus Genomics
 
 Some of the highlights of this month’s deliverable are: 
-* We indexed the 5 downsampled and 107 open access TOPMed samples within the data portal at https://globus-portal.fair-research.org/workflows/ 
+* We indexed the 5 downsampled and 107 open access TOPMed samples within the data portal at https://globus-portal.fair-research.org/4M.4.Fullstacks/
 * We implemented a CWL-Runner tool within Galaxy to support CWL workflow execution within Galaxy based Globus Genomics
 * We implemented a GA4GH WES service that provides a standard interface to allow CWL based workflow submission and workflow status tracking hiding the Galaxy specific details
 * A major feature is the use of Globus auth tokens for user-management on the Galaxy side, thus eliminating the need for a Galaxy API keys used in the previous month deliverables
